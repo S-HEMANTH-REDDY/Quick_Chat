@@ -43,4 +43,3 @@ npm start
 
 Application is live at `localhost:3000`. 
 
-![](https://github.com/schadokar/go-chat-app/blob/main/Videos%20(1).gif)
