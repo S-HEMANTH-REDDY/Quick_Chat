@@ -1,0 +1,12 @@
+{
+  "name": "go-chat-app",
+  "version": "1.0.0",
+  "description": "A detailed article is published on [Medium](https://levelup.gitconnected.com/create-a-chat-application-in-golang-with-redis-and-reactjs-c75611717f84).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

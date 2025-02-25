@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fd351138.css","mappings":"AAAA,iBAII,YAAa,CACb,6BAA8B,CAH9B,YAAa,CACb,gBAAiB,CAFjB,kBAKF","sources":["Components/Chat/Chat.css"],"sourcesContent":[".message-history {\n    padding-right: 15px;\n    height: 25rem;\n    overflow: overlay;\n    display: flex;\n    flex-direction: column-reverse;\n  }\n  "],"names":[],"sourceRoot":""}

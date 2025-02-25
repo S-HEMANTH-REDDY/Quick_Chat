@@ -1,0 +1,39 @@
+package redisrepo
+
+import (
+	"context"
+	"log"
+	"os"
+
+	"github.com/go-redis/redis/v8"
+)
+
+var redisClient *redis.Client
+
+func InitialiseRedis() *redis.Client {
+	// Set up Redis options
+	options := &redis.Options{
+		Addr: os.Getenv("REDIS_CONNECTION_STRING"),
+		DB:   0,
+	}
+	
+	// Only add password if it's actually set
+	password := os.Getenv("REDIS_PASSWORD")
+	if password != "" && password != "myRedisPassword" {
+		options.Password = password
+	}
+
+	conn := redis.NewClient(options)
+
+	// checking if redis is connected
+	pong, err := conn.Ping(context.Background()).Result()
+	if err != nil {
+		log.Fatal("Redis Connection Failed", err)
+	}
+
+	log.Println("Redis Successfully Connected.", "Ping", pong)
+
+	redisClient = conn
+
+	return redisClient
+}
